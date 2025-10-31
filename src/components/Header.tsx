@@ -43,7 +43,7 @@ const Header = () => {
             <input
               type="text"
               placeholder="Search anything here"
-              className="w-full md:w-80 px-10 py-2 rounded bg-gray-100 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-500"
+              className="w-full md:w-80 px-10 py-2 rounded bg-gray-100 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-green-500/50"
             />
             <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
               <FaSearch size={18} />
