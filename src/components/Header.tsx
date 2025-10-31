@@ -3,6 +3,7 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 import { FaCaretDown, FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import Sidebar from "./Sidebar";
 import profileImg from "../assets/profile.jpeg";
+import { TbActivityHeartbeat } from "react-icons/tb";
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -10,24 +11,20 @@ const Header = () => {
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   return (
-    <div className="flex">
+    <div className="">
       <div
-        className={`fixed md:static top-0 left-0 h-full z-20 transition-transform duration-300 ${
+        className={`fixed md:hidden top-16 left-0 h-full z-20 transition-transform duration-300 ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0`}
       >
         <Sidebar />
       </div>
 
-      {isSidebarOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-30 z-10 md:hidden"
-          onClick={() => setIsSidebarOpen(false)}
-        ></div>
-      )}
 
       <div className="navbar flex justify-between items-center pr-4 py-2 w-full bg-white h-16 shadow relative z-30">
-        <div className="flex items-center gap-3">
+        
+        
+        <div className="flex items-center gap-3 ml-5">
           <button
             className="md:hidden p-2 rounded hover:bg-gray-100"
             onClick={toggleSidebar}
@@ -38,8 +35,21 @@ const Header = () => {
               <FaBars size={20} className="text-gray-700" />
             )}
           </button>
-
-          <div className="relative pl-2">
+<div className="h-16 hidden flex-col items-center justify-center md:flex">
+                  <div className="logo flex items-center gap-2">
+                    <TbActivityHeartbeat size={40} color="#2E8075" />
+                    <p className="font-medium text-2xl text-gray-800">
+                      We
+                      <span className="font-extralight text-2xl text-gray-500">
+                        Care
+                      </span>
+                    </p>
+                  </div>
+                  <p className="text-sm text-gray-400 font-medium">
+                    Medical Admin Dashboard
+                  </p>
+                </div>
+          <div className="relative pl-2 md:ml-12">
             <input
               type="text"
               placeholder="Search anything here"

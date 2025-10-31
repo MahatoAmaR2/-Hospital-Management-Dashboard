@@ -16,7 +16,7 @@ const Sidebar = () => {
   return (
     <>
       <div className="shadow w-3xs flex flex-col bg-white h-full overflow-y-auto">
-        <div className="h-16 flex flex-col items-center justify-center">
+        <div className="h-16 flex flex-col items-center justify-center md:hidden">
           <div className="logo flex items-center gap-2">
             <TbActivityHeartbeat size={40} color="#2E8075" />
             <p className="font-medium text-2xl text-gray-800">
