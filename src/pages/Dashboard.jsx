@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
+import Report from "../components/Report";
 import { FiDownload } from "react-icons/fi";
 
 const Dashboard = () => {
@@ -38,7 +39,7 @@ const Dashboard = () => {
                 </select>
               </div>
               <button
-                className="flex items-center h-12 w-40 justify-between gap-2 px-4 py-2 bg-[#2E8075] text-white text-sm font-medium rounded-md
+                className="flex items-center h-12 w-40 justify-center gap-2 px-4 py-2 bg-[#2E8075] text-white text-sm font-medium rounded-md
                 shadow-sm cursor-pointer transition-transform duration-200 ease-in-out hover:scale-95"
               >
                 <FiDownload className="w-4 h-4" />
@@ -46,10 +47,13 @@ const Dashboard = () => {
               </button>
             </div>
           </div>
+          <div className="chart mx-auto px-6">
+            <Report />
+          </div>
         </div>
       </div>
     </>
   );
 };
 
-export default Dashboard;
+export default Dashboard;10
