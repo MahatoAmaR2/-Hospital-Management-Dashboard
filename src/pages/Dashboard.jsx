@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import Report from "../components/Report";
 import { FiDownload } from "react-icons/fi";
+import Department from "../components/Department";
+import Conference from "../components/Conference";
 
 const Dashboard = () => {
   const [selected, setSelected] = useState("Week");
@@ -49,6 +51,10 @@ const Dashboard = () => {
           </div>
           <div className="chart mx-auto px-6">
             <Report />
+          </div>
+          <div className="flex flex-col md:flex-row ">
+            <Department />
+            <Conference />
           </div>
         </div>
       </div>
